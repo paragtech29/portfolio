@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowDown, Sparkles, Download, Eye } from "lucide-react"
+import { ArrowDown, Download, Eye } from "lucide-react"
 import { resumeData } from "@/data/resume"
 import { useTextScramble } from "@/hooks/use-text-scramble"
 import { MagneticButton } from "@/components/ui/magnetic-button"
@@ -77,23 +77,6 @@ export function Hero({ animate }: HeroProps) {
         style={{ y, opacity, scale }}
       >
         {/* Badge with pulse */}
-        <motion.div
-          variants={fadeUp}
-          className="glass flex items-center gap-2 rounded-full px-4 py-2 text-sm text-muted-foreground"
-        >
-          <motion.div
-            animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            <Sparkles className="h-4 w-4 text-primary" />
-          </motion.div>
-          <span>Available for opportunities</span>
-          <motion.div
-            className="h-2 w-2 rounded-full bg-emerald-500"
-            animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          />
-        </motion.div>
 
         {/* Name with split text animation */}
         <motion.h1
